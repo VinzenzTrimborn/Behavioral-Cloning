@@ -4,7 +4,7 @@
 
 **Behavioral Cloning Project**
 
-This repository contains code for a project I did as a part of Udacity's Self Driving Car Nano Degree Program. I trained a car to drive itself in a simulator. The car was trained to drive itself using a deep neural network. 
+This repository contains code for a project I did as a part of Udacity's Self Driving Car Nanodegree Program. I trained a car to drive itself in a simulator. The car was trained to drive itself using a deep neural network. 
 
 The goals / steps of this project are the following:
 * Using the simulator to collect data of good driving behavior
