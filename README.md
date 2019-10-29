@@ -117,4 +117,4 @@ After the collection process, I had 94147 number of data points. It took a while
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The  number of epochs was 3 as evidenced by the val_loss and training_loss which were both decreasing after each epoch. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The  number of epochs was 3 as the val_loss and training_loss which were both decreasing after each epoch. I used an adam optimizer so that manually training the learning rate wasn't necessary.
