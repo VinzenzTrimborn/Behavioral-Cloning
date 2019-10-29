@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Image of center lane driving" 
+[image1]: ./examples/road.png " Image of center lane driving" 
 [image3]: ./examples/placeholder_small.png "Recovery Image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
@@ -47,8 +47,6 @@ The model.py file contains the code for training and saving the convolution neur
 
 ### Model Architecture and Training Strategy
 
-### Model Architecture and Training Strategy
-
 #### 1. Solution Design Approach
 
 The overall strategy for deriving a model architecture was to start of with a simple approach and then work my way up.
@@ -68,22 +66,49 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes:
 ```sh
 
-NETWORK
+model.add(Lambda(lambda x: x / 255.0 - 0.5,input_shape=(160,320,3)))
+model.add(Cropping2D(cropping=((70,25),(0,0))))
+
+#layer 1: Convolution, filters: 24, filter size: 5x5
+model.add(Conv2D(filters=24, kernel_size=(5, 5), activation='relu'))
+model.add(MaxPooling2D())
+
+#layer 2: Convolution, filters: 36, filter size: 5x5
+model.add(Conv2D(filters=36, kernel_size=(5, 5), activation='relu'))
+model.add(MaxPooling2D())
+
+#layer 3: Convolution, filters: 63, filter size: 3x3
+model.add(Conv2D(filters=64, kernel_size=(3, 3), activation='relu'))
+model.add(MaxPooling2D())
+
+#layer 4: Convolution, filters: 64, filter size: 3x3
+model.add(Conv2D(filters=64, kernel_size=(3, 3), activation='relu'))
+model.add(MaxPooling2D())
+
+model.add(Flatten())
+
+#layer 5: fully connected layer
+model.add(Dense(units=120, activation='relu'))
+
+#Adding a dropout layer to avoid overfitting.
+model.add(Dropout(0.2))
+
+#layer 6: fully connected layer
+model.add(Dense(units=84, activation='relu'))
+
+#layer 7: fully connected layer
+model.add(Dense(units=10, activation='relu'))
+
+#layer 8: fully connected layer
+model.add(Dense(units=1))
 
 ```
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I first recorded two laps on track one using center lane driving. I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get on track to the middle again. Hereare some example image:
 
-![alt text][image2]
-
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get on track to the middle again. These images show what a recovery looks like starting from the side of the road:
-
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
-
+![alt text][image1]
 
 To augment the data sat, I also flipped images and angles thinking that this would reduce the chance of the data set beeing biase. Since the test road is a circle, the car might always tend to drive to the left. 
 
