@@ -2,20 +2,22 @@
 
 ---
 
+[//]: # (Image References)
+
+[image1]: ./examples/road.png " Image of center lane driving" 
+[image2]: ./examples/Le-Net.jpg "LeNet-5"
+[image3]: ./examples/output.gif "Output"
+[image5]: ./examples/placeholder_small.png "Recovery Image"
+[image6]: ./examples/placeholder_small.png "Normal Image"
+[image7]: ./examples/placeholder_small.png "Flipped Image"
+
 ## Introduction
 
 This repository contains code for a project I did as a part of Udacity's Self Driving Car Nanodegree Program. I train a car to drive itself in a simulator. Here I apply the concepts of Deep Learning and Convolutional Neural Networks to teach the computer to drive car autonomously. This project makes use of a Udacity-developed driving simulator and training data collected from the simulator (neither of which is included in this repo). 
 We feed the data collected from Simulator to our model, this data is fed in the form of images captured by 3 dashboard cams center, left and right. The output data contains a file data.csv which has the mappings of center, left and right images and the corresponding steering angle, throttle, brake and speed.
  The challenge in this project is to collect all sorts of training data so as to train the model to respond correctly in any type of situation.
 
-[//]: # (Image References)
-
-[image1]: ./examples/road.png " Image of center lane driving" 
-[image2]: ./examples/Le-Net.jpg "LeNet-5"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+![alt text][image3]
 
 ---
 
