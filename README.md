@@ -2,22 +2,11 @@
 
 ---
 
-### Introduction
+## Introduction
 
 This repository contains code for a project I did as a part of Udacity's Self Driving Car Nanodegree Program. I train a car to drive itself in a simulator. Here I apply the concepts of Deep Learning and Convolutional Neural Networks to teach the computer to drive car autonomously. This project makes use of a Udacity-developed driving simulator and training data collected from the simulator (neither of which is included in this repo). 
 We feed the data collected from Simulator to our model, this data is fed in the form of images captured by 3 dashboard cams center, left and right. The output data contains a file data.csv which has the mappings of center, left and right images and the corresponding steering angle, throttle, brake and speed.
  The challenge in this project is to collect all sorts of training data so as to train the model to respond correctly in any type of situation.
-
-The [goals / steps](https://review.udacity.com/#!/rubrics/432/view) of this project are the following:
-* Using the simulator to collect data of good driving behavior
-* Building, a convolution neural network in Keras that predicts steering angles from images
-* Training and validating the model with a training and validation set
-* Testing that the model successfully drives around track one without leaving the road
-
-Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
-```sh
-python drive.py model.h5
-```
 
 [//]: # (Image References)
 
@@ -29,6 +18,29 @@ python drive.py model.h5
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
 ---
+
+## Overview
+
+The [goals / steps](https://review.udacity.com/#!/rubrics/432/view) of this project are the following:
+* Using the simulator to collect data of good driving behavior
+* Building, a convolution neural network in Keras that predicts steering angles from images
+* Training and validating the model with a training and validation set
+* Testing that the model successfully drives around track one without leaving the road
+
+### Important Project Files
+|  Filename   |   Description  | 
+|:-------------:|:-------------:|
+| model.py | define and train the neual network |
+| model.h5 | saved model by keras |
+| drive.py | communicate with simulator and use saved model to predict steering angle  |
+
+Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
+```sh
+python drive.py model.h5
+```
+
+
+
 ### Model Architecture and Training Strategy
 
 #### 1. Solution Design Approach
