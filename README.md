@@ -11,7 +11,7 @@ We feed the data collected from Simulator to our model, this data is fed in the 
 [//]: # (Image References)
 
 [image1]: ./examples/road.png " Image of center lane driving" 
-[image2]: ./examples/Le-Net.png "LeNet-5"
+[image2]: ./examples/Le-Net.jpg "LeNet-5"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
