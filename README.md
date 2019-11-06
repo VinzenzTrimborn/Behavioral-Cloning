@@ -11,7 +11,7 @@ We feed the data collected from Simulator to our model, this data is fed in the 
 [//]: # (Image References)
 
 [image1]: ./examples/road.png " Image of center lane driving" 
-[image3]: ./examples/placeholder_small.png "Recovery Image"
+[image2]: ./examples/Le-Net.png "LeNet-5"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
@@ -27,7 +27,7 @@ The [goals / steps](https://review.udacity.com/#!/rubrics/432/view) of this proj
 * Training and validating the model with a training and validation set
 * Testing that the model successfully drives around track one without leaving the road
 
-### Important Project Files
+### Project Files
 |  Filename   |   Description  | 
 |:-------------:|:-------------:|
 | model.py | define and train the neual network |
@@ -39,8 +39,6 @@ Using the Udacity provided simulator and my drive.py file, the car can be driven
 python drive.py model.h5
 ```
 
-
-
 ### Model Architecture and Training Strategy
 
 #### 1. Solution Design Approach
@@ -48,6 +46,8 @@ python drive.py model.h5
 The overall strategy for deriving a model architecture was to start of with a simple approach and then work my way up.
 
 My first step was to use a convolution neural network model similar to the LeNet-5 model. I thought this model might be appropriate because it was simple and I understood it. I added a few Dropout layers and a Lambder layer and trained the model.
+
+![alt text][image2]
 
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
 
