@@ -8,11 +8,16 @@ This repository contains code for a project I did as a part of Udacity's Self Dr
 We feed the data collected from Simulator to our model, this data is fed in the form of images captured by 3 dashboard cams center, left and right. The output data contains a file data.csv which has the mappings of center, left and right images and the corresponding steering angle, throttle, brake and speed.
  The challenge in this project is to collect all sorts of training data so as to train the model to respond correctly in any type of situation.
 
-The goals / steps of this project are the following:
+The [goals / steps](https://review.udacity.com/#!/rubrics/432/view) of this project are the following:
 * Using the simulator to collect data of good driving behavior
 * Building, a convolution neural network in Keras that predicts steering angles from images
 * Training and validating the model with a training and validation set
 * Testing that the model successfully drives around track one without leaving the road
+
+Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
+```sh
+python drive.py model.h5
+```
 
 [//]: # (Image References)
 
@@ -23,30 +28,7 @@ The goals / steps of this project are the following:
 [image6]: ./examples/placeholder_small.png "Normal Image"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
-## Rubric Points
-### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
-
 ---
-### Files Submitted & Code Quality
-
-#### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
-
-My project includes the following files:
-* model.py containing the script to create and train the model
-* drive.py for driving the car in autonomous mode
-* model.h5 containing a trained convolution neural network 
-* writeup_report.md summarizing the results
-
-#### 2. Submission includes functional code
-Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
-```sh
-python drive.py model.h5
-```
-
-#### 3. Submission code is usable and readable
-
-The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
-
 ### Model Architecture and Training Strategy
 
 #### 1. Solution Design Approach
