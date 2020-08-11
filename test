@@ -1,0 +1,29 @@
+geofences = []
+geofences.append([9,68,20,23])
+geofences.append([9,13,0,23])
+geofences.append([9,110,8,11])
+geofences.append([107,110,0,26])
+geofences.append([107,165,24,26])
+geofences.append([163,165,24,30])
+geofences.append([163,194,28,30])
+geofences.append([189,194,0,30])
+geofences.append([142,194,5,8])
+geofences.append([154,156,0,8])
+geofences.append([107,194,0,3])
+
+def within_fence(x,y,geofences):
+    for geofence in geofences:
+        if x >= geofence[0] and x <= geofence[1] and y >= geofence[2] and y <= geofence[3]:
+            return True
+    return False    
+    
+matrix = []
+breite = 208
+hoehe = 31
+for b in range(0,breite):
+    matrix.append([])
+    for h in range(0, hoehe):
+        if within_fence(b, h, geofences):
+            matrix[b].append(1)
+        else:
+            matrix[b].append(0)
